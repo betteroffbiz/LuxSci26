@@ -146,9 +146,13 @@
         
         <!-- CTA Buttons -->
         <div class="hidden lg:flex items-center space-x-4">
-          <a href="#" class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">Login</a>
-          <a href="#" class="btn-secondary px-4 py-2 border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 font-medium transition-all duration-200">Contact Us</a>
-          <a href="#" class="btn-primary px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 font-medium transition-all duration-200">Get a Demo</a>
+          <a href="#" class="btn-secondary">Login</a>
+          <a href="#" class="btn-primary">
+            Contact Us
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
         </div>
         
         <!-- Mobile Menu Button -->
@@ -217,10 +221,14 @@
           <a href="#" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium">Pricing</a>
           
           <!-- Mobile CTA -->
-          <div class="pt-4 border-t border-gray-200 mt-4 space-y-2">
-            <a href="#" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium">Login</a>
-            <a href="#" class="block px-3 py-2 text-center border border-blue-600 text-blue-600 rounded-md hover:bg-blue-50 font-medium">Contact Us</a>
-            <a href="#" class="block px-3 py-2 text-center bg-blue-600 text-white rounded-md hover:bg-blue-700 font-medium">Get a Demo</a>
+          <div class="pt-4 border-t border-gray-200 mt-4 space-y-3">
+            <a href="#" class="btn-secondary w-full text-center">Login</a>
+            <a href="#" class="btn-primary w-full text-center justify-center">
+              Contact Us
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </a>
           </div>
         </div>
       </div>

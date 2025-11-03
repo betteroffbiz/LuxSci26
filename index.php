@@ -28,8 +28,11 @@
                   <?php the_excerpt(); ?>
                 </div>
                 
-                <a href="<?php the_permalink(); ?>" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-200 text-sm font-medium no-underline">
+                <a href="<?php the_permalink(); ?>" class="btn-blog">
                   Read More
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
                 </a>
               </div>
             </article>
