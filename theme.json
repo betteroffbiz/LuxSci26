@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "settings": {
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "ui-sans-serif, system-ui",
+          "slug": "system",
+          "name": "System"
+        }
+      ]
+    },
+    "spacing": {
+      "units": [
+        "px",
+        "rem",
+        "vw",
+        "vh"
+      ]
+    }
+  },
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--system)"
+    }
+  }
+}
