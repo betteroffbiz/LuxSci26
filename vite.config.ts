@@ -14,15 +14,23 @@ export default defineConfig(() => ({
     }
   },
   server: {
-    host: 'localhost',           // change to '0.0.0.0' if you want LAN devices
-    port: 5173,
+    host: 'localhost',
+    port: 5174,
     strictPort: true,
-    // Windows + file watchers (use if HMR seems flaky):
+    cors: true,
+    // Enable file watching with polling for better compatibility
     watch: { usePolling: true, interval: 150 },
-    // If your local WP runs on HTTPS, uncomment and set HTTPS here:
-    // https: { key: fs.readFileSync('C:/path/to/localhost-key.pem'),
-    //          cert: fs.readFileSync('C:/path/to/localhost-cert.pem') },
-    // If a firewall/proxy blocks websockets, pin clientPort:
-    // hmr: { clientPort: 5173 }
+    // Configure HMR for WordPress development
+    hmr: {
+      port: 5173,
+      // Ensure HMR works with WAMP setup
+      clientPort: 5173
+    },
+    // Headers to allow cross-origin requests from WordPress
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+    }
   }
 }));
