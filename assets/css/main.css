@@ -119,5 +119,35 @@
   .entry-content p {
     @apply text-body mb-4;
   }
+  
+  /* Navigation Components */
+  .nav-link {
+    @apply relative;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-600 transform -translate-x-1/2 transition-all duration-200;
+  }
+  
+  .nav-dropdown:hover .nav-dropdown-content {
+    @apply opacity-100 visible;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+  
+  .mobile-menu-toggle:focus {
+    @apply outline-none ring-2 ring-blue-500 ring-offset-2;
+  }
 }
 
