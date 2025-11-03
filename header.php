@@ -3,25 +3,52 @@
 <head>
   <meta charset="<?php bloginfo('charset'); ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Minimal critical CSS to prevent FOUC - full styles in main.css -->
+  <style>
+    .nav-loading { visibility: hidden; }
+    .nav-loading header { visibility: visible; display: block; background: #fff; position: sticky; top: 0; z-index: 50; }
+    .nav-loading .nav-flex { display: flex; align-items: center; justify-content: space-between; height: 4rem; }
+    @media (min-width: 1024px) { .nav-loading .nav-flex { height: 5rem; } }
+  </style>
+  
   <?php wp_head(); ?>
+  
+  <!-- Remove loading class when CSS is ready -->
+  <script>
+    // Remove nav-loading class as early as possible
+    function removeNavLoading() {
+      document.body.classList.remove('nav-loading');
+    }
+    
+    // Try multiple approaches for fastest removal
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', removeNavLoading);
+    } else {
+      removeNavLoading();
+    }
+    
+    // Fallback timeout
+    setTimeout(removeNavLoading, 100);
+  </script>
 </head>
-<body <?php body_class('min-h-svh bg-white text-slate-900 antialiased'); ?>>
+<body <?php body_class('min-h-svh bg-white text-slate-900 antialiased nav-loading'); ?>>
   <a class="skip-link sr-only focus:not-sr-only" href="#main">Skip to content</a>
   
   <!-- Header -->
   <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
     <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between h-16 lg:h-20">
+      <div class="nav-flex flex items-center justify-between h-16 lg:h-20">
         
         <!-- Logo -->
-        <div class="flex-shrink-0">
+        <div class="logo-container flex-shrink-0">
           <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center hover:opacity-80 transition-opacity duration-200">
-            <img src="<?php echo get_asset_image('logos/horizontal-logo-dark.svg'); ?>" alt="<?php bloginfo('name'); ?>" class="h-8 lg:h-10 w-auto">
+            <img src="<?php echo simple_get_asset_image('logos/horizontal-logo-dark.svg'); ?>" alt="<?php bloginfo('name'); ?>" class="h-8 lg:h-10 w-auto">
           </a>
         </div>
         
         <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center space-x-8">
+        <nav class="desktop-nav hidden lg:flex items-center space-x-8">
           <!-- Products Dropdown -->
           <div class="nav-dropdown group relative">
             <button class="nav-link flex items-center space-x-1 px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
@@ -126,7 +153,7 @@
         
         <!-- Mobile Menu Button -->
         <div class="lg:hidden">
-          <button id="mobile-menu-button" class="mobile-menu-toggle p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors duration-200" aria-expanded="false">
+          <button id="mobile-menu-button" class="mobile-toggle mobile-menu-toggle p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors duration-200" aria-expanded="false">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path class="hamburger-line" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
               <path class="close-line hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>

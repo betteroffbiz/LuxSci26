@@ -8,6 +8,9 @@ console.log('WordPress theme with Vite is loaded!');
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOM is ready');
   
+  // Ensure nav-loading class is removed (final cleanup)
+  document.body.classList.remove('nav-loading');
+  
   // Mobile menu toggle
   const mobileMenuButton = document.getElementById('mobile-menu-button');
   const mobileMenu = document.getElementById('mobile-menu');

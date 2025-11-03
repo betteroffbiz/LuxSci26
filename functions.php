@@ -1,27 +1,42 @@
 <?php
+// Production mode - constants managed elsewhere
+
 require_once get_template_directory() . '/inc/setup.php';
 require_once get_template_directory() . '/inc/enqueue.php';
-require_once get_template_directory() . '/dev-config.php';
+
+// Temporary: Use simple production asset loading
+require_once get_template_directory() . '/simple-production.php';
+
+// Uncomment the line below to force development mode
+// require_once get_template_directory() . '/dev-mode.php';
+
+// require_once get_template_directory() . '/dev-config.php';
 
 function perf_enqueue_assets() {
   $theme_version = wp_get_theme()->get('Version');
   $theme_dir = get_template_directory();
   $theme_uri = get_template_directory_uri();
 
-  // DEV: Load from Vite server
-  if (defined('VITE_DEV') && VITE_DEV) {
-    $devServer = defined('VITE_SERVER') ? VITE_SERVER : 'http://localhost:5174';
-    // Load the Vite client for HMR + your entry
-    wp_enqueue_script('vite-client', $devServer . '/@vite/client', [], null, true);
-    wp_enqueue_script('perf-main', $devServer . '/assets/js/main.ts', [], null, true);
-    
-    // Add module type to both scripts
-    add_filter('script_loader_tag', 'perf_add_module_to_vite_script', 10, 3);
-    return;
-  }
+  // Debug: Add HTML comment showing current mode
+  add_action('wp_head', function() {
+    $timestamp = date('Y-m-d H:i:s');
+    echo "<!-- Asset Loading Mode: FORCED PRODUCTION - {$timestamp} -->\n";
+  });
+
+  // TEMPORARILY DISABLED DEV MODE - FORCE PRODUCTION
+  // if (defined('VITE_DEV') && VITE_DEV) {
+  //   $devServer = defined('VITE_SERVER') ? VITE_SERVER : 'http://localhost:5174';
+  //   // Load the Vite client for HMR + your entry
+  //   wp_enqueue_script('vite-client', $devServer . '/@vite/client', [], null, true);
+  //   wp_enqueue_script('perf-main', $devServer . '/assets/js/main.ts', [], null, true);
+  //   
+  //   // Add module type to both scripts
+  //   add_filter('script_loader_tag', 'perf_add_module_to_vite_script', 10, 3);
+  //   return;
+  // }
 
   // PROD: Load from built manifest
-  $manifest_path = $theme_dir . '/dist/manifest.json';
+  $manifest_path = $theme_dir . '/dist/.vite/manifest.json';
   if (!file_exists($manifest_path)) return;
 
   $manifest = json_decode(file_get_contents($manifest_path), true);
@@ -49,7 +64,8 @@ function perf_add_module_to_vite_script($tag, $handle, $src) {
   return $tag;
 }
 
-add_action('wp_enqueue_scripts', 'perf_enqueue_assets', 20);
+// TEMPORARILY DISABLED
+// add_action('wp_enqueue_scripts', 'perf_enqueue_assets', 20);
 
 /**
  * Image helper functions
@@ -60,15 +76,17 @@ function get_asset_image($filename) {
   $theme_dir = get_template_directory();
   $theme_uri = get_template_directory_uri();
   
-  // Check if we're in development mode (VITE_DEV is defined)
-  if (defined('VITE_DEV') && VITE_DEV) {
-    // In development, serve directly from assets folder via Vite server
-    $vite_server = defined('VITE_SERVER') ? VITE_SERVER : 'http://localhost:5174';
-    return $vite_server . "/assets/images/{$filename}";
-  }
+  // TEMPORARILY DISABLED DEV MODE - FORCE PRODUCTION FOR IMAGES TOO
+  // if (defined('VITE_DEV') && VITE_DEV) {
+  //   // In development, serve directly from assets folder via Vite server
+  //   $vite_server = defined('VITE_SERVER') ? VITE_SERVER : 'http://localhost:5174';
+  //   $url = $vite_server . "/assets/images/{$filename}";
+  //   error_log("get_asset_image DEV mode: {$filename} -> {$url}");
+  //   return $url;
+  // }
   
   // Production: check manifest for hashed filename
-  $manifest_path = $theme_dir . '/dist/manifest.json';
+  $manifest_path = $theme_dir . '/dist/.vite/manifest.json';
   if (file_exists($manifest_path)) {
     $manifest = json_decode(file_get_contents($manifest_path), true);
     $asset_key = "assets/images/{$filename}";
