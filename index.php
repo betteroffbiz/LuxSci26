@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="container mx-auto px-4 py-8">
+<div class="container mx-auto py-8 px-25">
   <div class="grid grid-cols-1 xl:grid-cols-4 gap-8">
     <!-- Main Content Area (3 columns) -->
     <main id="main" class="xl:col-span-3">

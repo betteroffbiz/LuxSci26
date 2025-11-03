@@ -380,3 +380,17 @@
   }
 }
 
+/* Custom spacing utilities */
+@layer utilities {
+  .pr-5rem {
+    padding-right: 5rem; /* 80px at 16px base font size */
+  }
+  
+  /* Responsive version - smaller padding on mobile */
+  @media (max-width: 768px) {
+    .pr-5rem {
+      padding-right: 1rem; /* 16px on mobile */
+    }
+  }
+}
+
