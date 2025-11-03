@@ -16,7 +16,10 @@ function perf_theme_setup() {
     ]);
     
     // Add custom image sizes for grid layout
-    add_image_size('grid-thumbnail', 400, 225, true); // 16:9 aspect ratio for grid
+    add_image_size('grid-thumbnail', 400, 225, true);   // 16:9 aspect ratio for grid
+    add_image_size('hero-large', 1920, 1080, true);     // Hero section images
+    add_image_size('card-medium', 600, 338, true);      // Larger card images
+    add_image_size('avatar-small', 64, 64, true);       // User avatars
     
     // Add menu support
     register_nav_menus([

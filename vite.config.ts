@@ -11,8 +11,13 @@ export default defineConfig(() => ({
     manifest: true,
     rollupOptions: {
       input: { 'assets/js/main': path.resolve(path.dirname(fileURLToPath(import.meta.url)), 'assets/js/main.ts') }
-    }
+    },
+    assetsDir: 'assets',
+    // Copy static assets during build
+    copyPublicDir: false
   },
+  // Optimize asset handling
+  assetsInclude: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.webp'],
   server: {
     host: 'localhost',
     port: 5174,

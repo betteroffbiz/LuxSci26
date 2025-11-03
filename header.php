@@ -15,8 +15,8 @@
         
         <!-- Logo -->
         <div class="flex-shrink-0">
-          <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center space-x-2 text-2xl font-bold text-gray-900 hover:text-blue-600 transition-colors duration-200">
-            <span><?php bloginfo('name'); ?></span>
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center hover:opacity-80 transition-opacity duration-200">
+            <img src="<?php echo get_asset_image('logos/horizontal-logo-dark.svg'); ?>" alt="<?php bloginfo('name'); ?>" class="h-8 lg:h-10 w-auto">
           </a>
         </div>
         
