@@ -24,8 +24,18 @@ if (!defined('VITE_DEV')) {
         (defined('WP_DEBUG') && WP_DEBUG)
     );
     
+    // Check if Vite development server is actually running
+    $vite_server_running = false;
     if ($is_local) {
+        $vite_url = 'http://localhost:5174';
+        $context = stream_context_create(['http' => ['timeout' => 1]]);
+        $vite_server_running = @file_get_contents($vite_url, false, $context) !== false;
+    }
+    
+    if ($is_local && $vite_server_running) {
         define('VITE_DEV', true);
         define('VITE_SERVER', 'http://localhost:5174');
+    } else {
+        define('VITE_DEV', false);
     }
 }
