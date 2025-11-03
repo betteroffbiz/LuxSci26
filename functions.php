@@ -10,7 +10,7 @@ function perf_enqueue_assets() {
 
   // DEV: Load from Vite server
   if (defined('VITE_DEV') && VITE_DEV) {
-    $devServer = defined('VITE_SERVER') ? VITE_SERVER : 'http://localhost:5173';
+    $devServer = defined('VITE_SERVER') ? VITE_SERVER : 'http://localhost:5174';
     // Load the Vite client for HMR + your entry
     wp_enqueue_script('vite-client', $devServer . '/@vite/client', [], null, true);
     wp_enqueue_script('perf-main', $devServer . '/assets/js/main.ts', [], null, true);

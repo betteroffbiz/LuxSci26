@@ -14,13 +14,13 @@
 ## Configuration
 
 The theme is configured to automatically detect local development and switch between:
-- **Development mode**: Loads assets from Vite dev server (localhost:5173)
+- **Development mode**: Loads assets from Vite dev server (localhost:5174)
 - **Production mode**: Loads from built assets in `/dist` folder
 
 ### Development Mode
 When `VITE_DEV` is enabled, the theme loads:
-- `http://localhost:5173/@vite/client` (for Hot Module Replacement)
-- `http://localhost:5173/assets/js/main.ts` (your main entry file)
+- `http://localhost:5174/@vite/client` (for Hot Module Replacement)
+- `http://localhost:5174/assets/js/main.ts` (your main entry file)
 
 ### Files Modified for Vite Integration
 - `functions.php`: Asset enqueuing logic
@@ -33,7 +33,7 @@ When `VITE_DEV` is enabled, the theme loads:
 If you get "Port already in use" errors:
 ```bash
 # Find what's using the port
-lsof -ti:5173
+lsof -ti:5174
 
 # Kill the process (replace PID with actual process ID)
 kill -9 <PID>
@@ -43,16 +43,16 @@ kill -9 <PID>
 
 ### 2. CORS Issues
 The Vite config includes CORS headers to allow requests from WordPress. If you still get CORS errors:
-- Ensure Vite server is running on localhost:5173
+- Ensure Vite server is running on localhost:5174
 - Check that WordPress is accessing the correct URLs
 - Verify the `VITE_SERVER` constant matches your Vite server URL
 
 ### 3. Assets Not Loading
 If assets aren't loading in development:
-1. Check if Vite server is running: `http://localhost:5173`
+1. Check if Vite server is running: `http://localhost:5174`
 2. Verify `VITE_DEV` constant is set (should auto-detect)
 3. Check browser console for errors
-4. Ensure WordPress can reach localhost:5173
+4. Ensure WordPress can reach localhost:5174
 
 ### 4. HMR (Hot Module Replacement) Not Working
 If changes aren't reflected immediately:

@@ -15,7 +15,7 @@ A tiny, fast base theme for excellent Core Web Vitals. Classic PHP templates, Ta
 ### Dev server (optional)
 - In `wp-config.php`, set `define('VITE_DEV', true);`
 - Run `npm run dev`
-- The theme will load assets from `http://localhost:5173`
+- The theme will load assets from `http://localhost:5174`
 
 ## Tailwind purge
 `tailwind.config.cjs` scans PHP/TS files to keep CSS tiny. Adjust `content` paths if you add custom locations.

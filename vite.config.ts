@@ -22,9 +22,9 @@ export default defineConfig(() => ({
     watch: { usePolling: true, interval: 150 },
     // Configure HMR for WordPress development
     hmr: {
-      port: 5173,
+      port: 5174,
       // Ensure HMR works with WAMP setup
-      clientPort: 5173
+      clientPort: 5174
     },
     // Headers to allow cross-origin requests from WordPress
     headers: {

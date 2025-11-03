@@ -8,7 +8,20 @@ module.exports = {
   ],
   theme: {
     container: { center: true, padding: '1rem' },
-    extend: {}
+    extend: {
+      fontFamily: {
+        'sans': ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        'heading': ['Montserrat', 'sans-serif'],
+      },
+      fontWeight: {
+        'light': 300,
+        'normal': 400,
+        'medium': 500,
+        'semibold': 600,
+        'bold': 700,
+        'extrabold': 800,
+      }
+    }
   },
   plugins: [
     require('@tailwindcss/typography'),

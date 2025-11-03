@@ -6,7 +6,7 @@
  * 
  * For local development, add these constants to wp-config.php:
  * define('VITE_DEV', true);
- * define('VITE_SERVER', 'http://localhost:5173');
+ * define('VITE_SERVER', 'http://localhost:5174');
  * 
  * OR include this file in wp-config.php:
  * require_once(ABSPATH . 'wp-content/themes/Luxsci26/dev-config.php');
@@ -26,6 +26,6 @@ if (!defined('VITE_DEV')) {
     
     if ($is_local) {
         define('VITE_DEV', true);
-        define('VITE_SERVER', 'http://localhost:5173');
+        define('VITE_SERVER', 'http://localhost:5174');
     }
 }
