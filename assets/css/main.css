@@ -281,6 +281,29 @@
   .mobile-menu-toggle:focus {
     @apply outline-none ring-2 ring-blue-500 ring-offset-2;
   }
+  
+  /* Enhanced mobile navigation styles */
+  .mobile-menu-toggle {
+    min-height: 44px; /* Minimum touch target size for accessibility */
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Improve mobile dropdown spacing */
+  .mobile-dropdown-content {
+    padding-left: 1rem;
+  }
+  
+  /* Mobile-specific button sizing */
+  @media (max-width: 1023px) {
+    .btn-primary, .btn-secondary {
+      min-height: 44px;
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+    }
+  }
 }
 
 /* Enhanced FOUC Prevention & Navigation Styles */
@@ -392,19 +415,44 @@
       padding-right: 1rem; /* 16px on mobile */
     }
   }
+  
+  /* Mobile-safe text sizes */
+  .text-responsive {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  @media (min-width: 768px) {
+    .text-responsive {
+      font-size: 1.125rem;
+      line-height: 1.6;
+    }
+  }
 }
 
 /* LuxSci Form Styles */
 @layer components {
-  /* Main container spacing */
+  /* Main container spacing - responsive */
   main {
-    margin-right: 40px;
+    margin-right: 0;
   }
   
-  /* Sidebar width adjustment */
+  @media (min-width: 1280px) {
+    main {
+      margin-right: 40px;
+    }
+  }
+  
+  /* Sidebar width adjustment - responsive */
   .sidebar {
-    min-width: 350px;
-    max-width: 400px;
+    width: 100%;
+  }
+  
+  @media (min-width: 1280px) {
+    .sidebar {
+      min-width: 350px;
+      max-width: 400px;
+    }
   }
   
   /* Contact form background */
@@ -437,8 +485,15 @@
   
   .containerr.pilar-container {
     display: flex;
+    flex-direction: column;
     gap: 0.75rem;
     margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .containerr.pilar-container {
+      flex-direction: row;
+    }
   }
   
   .column.pilar-edit-input {
@@ -453,6 +508,7 @@
     font-size: 0.875rem;
     font-family: 'Montserrat', sans-serif;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    min-height: 44px; /* Better touch targets for mobile */
   }
   
   .column.pilar-edit-input input:focus {
@@ -509,6 +565,7 @@
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 1rem;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    min-height: 44px; /* Better touch targets for mobile */
   }
   
   input[type="text"]:focus, input[type="email"]:focus {

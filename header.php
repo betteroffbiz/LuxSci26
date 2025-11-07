@@ -36,7 +36,7 @@
   <a class="skip-link sr-only focus:not-sr-only" href="#main">Skip to content</a>
   
   <!-- Header -->
-  <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50" style="margin-bottom: 85px;">
+  <header class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50 mb-8 md:mb-16 lg:mb-20">
     <div class="container mx-auto px-4">
       <div class="nav-flex flex items-center justify-between h-16 lg:h-20">
         

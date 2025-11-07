@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="main" class="container mx-auto py-8 prose prose-slate max-w-3xl px-25">
+<main id="main" class="container mx-auto py-8 prose prose-slate max-w-3xl px-4 md:px-8 xl:px-25">
   <h1 class="!mb-6"><?php the_archive_title(); ?></h1>
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <article <?php post_class('mb-8'); ?>>
