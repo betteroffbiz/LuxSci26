@@ -1,17 +1,84 @@
-<div class="space-y-8">
-  <!-- WordPress Widget Area -->
-  <?php if (is_active_sidebar('sidebar-1')) : ?>
-    <div class="widget-area">
-      <?php dynamic_sidebar('sidebar-1'); ?>
+<div class="space-y-8 sidebar">
+  <!-- Contact Form -->
+  <div class="rounded-lg shadow-sm border border-gray-200 p-6 contact-form-widget" style="background-color: #f8f9fa;">
+    <h3 class="text-lg font-semibold mb-2 text-gray-900">Get in touch</h3>
+    <div class="mb-4">
+      <blockquote class="text-gray-600 text-sm mb-2">Find The Best Solution For Your Organization</blockquote>
+      <blockquote class="text-gray-600 text-sm">Talk To An Expert & Get A Quote</blockquote>
     </div>
-  <?php endif; ?>
+
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function timestamp() { 
+            var response = document.getElementById("g-recaptcha-response"); 
+            if (response == null || response.value.trim() == "") {
+                var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
+                elems["ts"] = JSON.stringify(new Date().getTime());
+                document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); 
+            } 
+        } 
+        setInterval(timestamp, 500);
+
+        // Validation des champs obligatoires
+        function validateForm() {
+            var firstName = document.getElementById("first_name").value.trim();
+            var lastName = document.getElementById("last_name").value.trim();
+            var company = document.getElementById("company").value.trim();
+            var email = document.getElementById("email").value.trim();
+
+            if (!firstName || !lastName || !email || !company) {
+                alert("Please complete all required fields.");
+                return false; // Empêche l'envoi du formulaire
+            }
+            return true; // Permet l'envoi si tous les champs sont remplis
+        }
+    </script>
+
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DHr000003Yktv" method="POST" onsubmit="return validateForm();">
+
+<input type="hidden" name='captcha_settings' value='{"keyname":"web_to_lead","fallback":"true","orgId":"00DHr000003Yktv","ts":""}'>
+<input type="hidden" name="oid" value="00DHr000003Yktv">
+<input type="hidden" name="retURL" value="https://luxsci.com/thank-you/">
+
+<div class="containerr pilar-container">
+    <div class="column pilar-edit-input">
+      <input id="first_name" maxlength="40" name="first_name" size="20" type="text" placeholder="First name*" required />
+    </div>
+    <div class="column pilar-edit-input">
+      <input id="last_name" maxlength="80" name="last_name" size="20" type="text" placeholder="Last name*" required /><br>
+    </div>
+ </div>
+  
+<input  id="email" maxlength="80" name="email" size="20" type="text" placeholder="Work Email*" required />
+
+<input  id="company" maxlength="80" name="company" size="20" type="text" placeholder="Company*" required />
+
+<div class="email-opt-in" style="font-size: 14px; align-items: flex-start;">
+  <div class="checkbox-column" style="padding-right:2%;">
+    <input style="width:15px; height:15px;"  id="00NPY000002QU4X" name="00NPY000002QU4X" type="checkbox" value="1" required />
+  </div>
+  <div class="text-column">
+    I consent to be contacted by LuxSci for this inquiry and other relevant content, products, and services. You may unsubscribe from these communications at any time. We're committed to your privacy. For more information, check out our Privacy Policy.
+  </div>
+</div>
+</br>
+
+<div class="g-recaptcha" data-sitekey="6LcSUvgpAAAAAEdFphKDLT6VvoD7XEVSgyq96Q2_"></div><br>
+
+<input type="submit" name="submit" class="submitbutton" value="Submit">
+
+</form>
+
+    <p class="text-sm text-gray-600 mt-3">A member of our staff will reach out to you</p>
+  </div>
 
   <!-- Search Widget -->
   <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
     <h3 class="text-lg font-semibold mb-4">Search</h3>
     <form role="search" method="get" action="<?php echo home_url('/'); ?>">
       <div class="flex">
-        <input type="search" name="s" placeholder="Search..." value="<?php echo get_search_query(); ?>" class="flex-1 px-3 py-2 border border-gray-300 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+        <input type="search" name="s" placeholder="Search..." value="<?php echo get_search_query(); ?>" class="flex-1 px-3 py-2 border border-gray-300 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
         <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-r hover:bg-blue-700 transition-colors duration-200">
           Search
         </button>
@@ -19,31 +86,9 @@
     </form>
   </div>
 
-  <!-- Recent Posts Widget -->
-  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-    <h3 class="text-lg font-semibold mb-4">Recent Posts</h3>
-    <ul class="space-y-3">
-      <?php
-      $recent_posts = wp_get_recent_posts(array(
-        'numberposts' => 5,
-        'post_status' => 'publish'
-      ));
-      foreach($recent_posts as $post_item): ?>
-        <li>
-          <a href="<?php echo get_permalink($post_item['ID']); ?>" class="text-blue-600 hover:text-blue-800 text-sm leading-relaxed no-underline">
-            <?php echo $post_item['post_title']; ?>
-          </a>
-          <div class="text-xs text-gray-500 mt-1">
-            <?php echo get_the_date('M j, Y', $post_item['ID']); ?>
-          </div>
-        </li>
-      <?php endforeach; ?>
-    </ul>
-  </div>
-
   <!-- Categories Widget -->
   <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-    <h3 class="text-lg font-semibold mb-4">Categories</h3>
+    <h3 class="text-lg font-semibold mb-4">Category</h3>
     <ul class="space-y-2">
       <?php
       $categories = get_categories(array(
@@ -61,48 +106,42 @@
     </ul>
   </div>
 
-  <!-- Archives Widget -->
+  <!-- Recent Posts Widget -->
   <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-    <h3 class="text-lg font-semibold mb-4">Archives</h3>
-    <ul class="space-y-2">
-      <?php wp_get_archives(array(
-        'type' => 'monthly',
-        'limit' => 12,
-        'format' => 'custom',
-        'before' => '<li>',
-        'after' => '</li>',
-        'echo' => true
-      )); ?>
+    <h3 class="text-lg font-semibold mb-4">Recent Posts</h3>
+    <ul class="space-y-3">
+      <?php
+      $recent_posts = wp_get_recent_posts(array(
+        'numberposts' => 6,
+        'post_status' => 'publish'
+      ));
+      foreach($recent_posts as $post_item): ?>
+        <li>
+          <a href="<?php echo get_permalink($post_item['ID']); ?>" class="text-blue-600 hover:text-blue-800 text-sm leading-relaxed no-underline block">
+            <?php echo $post_item['post_title']; ?>
+          </a>
+        </li>
+      <?php endforeach; ?>
     </ul>
   </div>
 
-  <!-- About Widget (Filler Content) -->
+  <!-- Lead Magnet Widget -->
   <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-    <h3 class="text-lg font-semibold mb-4">About This Blog</h3>
-    <p class="text-gray-700 text-sm leading-relaxed mb-3">
-      Welcome to our blog! We share insights, tutorials, and thoughts on various topics. 
-      Stay tuned for regular updates and engaging content.
-    </p>
-    <p class="text-gray-700 text-sm leading-relaxed">
-      Feel free to explore our categories and archives to find content that interests you.
-    </p>
-  </div>
-
-  <!-- Tags Widget -->
-  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-    <h3 class="text-lg font-semibold mb-4">Popular Tags</h3>
-    <div class="flex flex-wrap gap-2">
-      <?php
-      $tags = get_tags(array(
-        'orderby' => 'count',
-        'order' => 'DESC',
-        'number' => 15
-      ));
-      foreach($tags as $tag): ?>
-        <a href="<?php echo get_tag_link($tag->term_id); ?>" class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full hover:bg-gray-200 transition-colors duration-200 no-underline">
-          <?php echo $tag->name; ?>
-        </a>
-      <?php endforeach; ?>
-    </div>
+    <h3 class="text-lg font-semibold mb-4">Get Your Free E-Book!</h3>
+    <p class="text-sm text-gray-700 mb-4">LuxSci High Email Deliverability Best Practices Paper</p>
+    <h4 class="font-medium text-sm mb-3">What you'll learn:</h4>
+    <ul class="text-xs text-gray-600 space-y-1 mb-4">
+      <li>How to optimize email performance</li>
+      <li>Key strategies to increase email deliverability rates</li>
+      <li>How email deliverability impacts marketing ROI</li>
+    </ul>
+    <h4 class="font-medium text-sm mb-3">Enter your email to download now!</h4>
+    <form class="space-y-3">
+      <input type="text" placeholder="First name" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
+      <input type="text" placeholder="Last name" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
+      <input type="email" placeholder="Your email" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
+      <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-200 text-sm font-medium">Download Now</button>
+    </form>
+    <p class="text-xs text-gray-500 mt-2">We respect your privacy. No spam, ever.</p>
   </div>
 </div>

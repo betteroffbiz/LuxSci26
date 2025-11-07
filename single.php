@@ -1,10 +1,12 @@
 <?php get_header(); ?>
-<div class="container mx-auto py-8 px-25">
-  <div class="grid grid-cols-1 xl:grid-cols-4 gap-8">
-    <!-- Main Content Area (3 columns) -->
-    <main id="main" class="xl:col-span-3">
+<div class="py-8">
+  <!-- Container with 100px side margins using custom Tailwind class -->
+  <div class="mx-auto px-24">
+    <div class="grid grid-cols-1 xl:grid-cols-6 gap-8">
+      <!-- Main Content Area (4 columns out of 6) -->
+      <main id="main" class="xl:col-span-4">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <article <?php post_class('w-full pr-5rem'); ?>>
+        <article <?php post_class('w-full'); ?>>
           <header class="mb-8">
             <h1 class="!mb-4 text-3xl lg:text-4xl font-bold text-gray-900"><?php the_title(); ?></h1>
             <div class="text-sm text-gray-500 mb-4">
@@ -60,8 +62,8 @@
       <?php endwhile; endif; ?>
     </main>
     
-    <!-- Sidebar (1 column) -->
-    <aside id="sidebar" class="xl:col-span-1">
+    <!-- Sidebar (2 columns out of 6) -->
+    <aside id="sidebar" class="xl:col-span-2">
       <?php get_sidebar(); ?>
     </aside>
   </div>

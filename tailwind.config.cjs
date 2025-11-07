@@ -9,6 +9,9 @@ module.exports = {
   theme: {
     container: { center: true, padding: '1rem' },
     extend: {
+      spacing: {
+        '25': '100px',
+      },
       fontFamily: {
         'sans': ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
         'heading': ['Montserrat', 'sans-serif'],
