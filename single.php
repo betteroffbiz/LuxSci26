@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <div class="py-8">
-  <!-- Container with 100px side margins using custom Tailwind class -->
-  <div class="mx-auto px-24">
-    <div class="grid grid-cols-1 xl:grid-cols-6 gap-8">
+  <!-- Container with responsive margins -->
+  <div class="mx-auto px-4 md:px-8 xl:px-24">
+    <div class="grid grid-cols-1 xl:grid-cols-6 gap-4 md:gap-8">
       <!-- Main Content Area (4 columns out of 6) -->
       <main id="main" class="xl:col-span-4">
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>

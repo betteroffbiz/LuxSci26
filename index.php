@@ -1,10 +1,10 @@
 <?php get_header(); ?>
-<div class="container mx-auto py-8 px-25">
-  <div class="grid grid-cols-1 xl:grid-cols-4 gap-8">
+<div class="container mx-auto py-8 px-4 md:px-8 xl:px-25">
+  <div class="grid grid-cols-1 xl:grid-cols-4 gap-4 md:gap-8">
     <!-- Main Content Area (3 columns) -->
     <main id="main" class="xl:col-span-3">
       <?php if (have_posts()) : ?>
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6">
           <?php while (have_posts()) : the_post(); ?>
             <article <?php post_class('bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden'); ?>>
               <?php if (has_post_thumbnail()) : ?>
@@ -13,7 +13,7 @@
                 </div>
               <?php endif; ?>
               
-              <div class="p-6">
+              <div class="p-4 md:p-6">
                 <div class="text-sm text-gray-500 mb-2">
                   <?php echo get_the_date(); ?> • By <?php the_author(); ?>
                 </div>

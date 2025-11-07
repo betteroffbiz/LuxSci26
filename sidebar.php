@@ -1,6 +1,6 @@
-<div class="space-y-8 sidebar">
+<div class="space-y-6 md:space-y-8 sidebar">
   <!-- Contact Form -->
-  <div class="rounded-lg shadow-sm border border-gray-200 p-6 contact-form-widget" style="background-color: #f8f9fa;">
+  <div class="rounded-lg shadow-sm border border-gray-200 p-4 md:p-6 contact-form-widget" style="background-color: #f8f9fa;">
     <h3 class="text-lg font-semibold mb-2 text-gray-900">Get in touch</h3>
     <div class="mb-4">
       <blockquote class="text-gray-600 text-sm mb-2">Find The Best Solution For Your Organization</blockquote>
@@ -74,7 +74,7 @@
   </div>
 
   <!-- Search Widget -->
-  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 md:p-6">
     <h3 class="text-lg font-semibold mb-4">Search</h3>
     <form role="search" method="get" action="<?php echo home_url('/'); ?>">
       <div class="flex">
@@ -87,7 +87,7 @@
   </div>
 
   <!-- Categories Widget -->
-  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 md:p-6">
     <h3 class="text-lg font-semibold mb-4">Category</h3>
     <ul class="space-y-2">
       <?php
@@ -107,7 +107,7 @@
   </div>
 
   <!-- Recent Posts Widget -->
-  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 md:p-6">
     <h3 class="text-lg font-semibold mb-4">Recent Posts</h3>
     <ul class="space-y-3">
       <?php
@@ -126,7 +126,7 @@
   </div>
 
   <!-- Lead Magnet Widget -->
-  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6" style="background-color: #f8f9fa;">
+  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 md:p-6" style="background-color: #f8f9fa;">
     <h3 class="text-lg font-semibold mb-4">Get Your Free E-Book!</h3>
     <p class="text-sm text-gray-700 mb-4">LuxSci High Email Deliverability Best Practices Paper</p>
     <img src="/wp-content/uploads/2025/05/achieving-high-email-deliverability-in-healthcare-blog.png" alt="High Email Deliverability Best Practices" class="w-full rounded mb-4">
