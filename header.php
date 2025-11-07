@@ -51,80 +51,67 @@
         <nav class="desktop-nav hidden lg:flex items-center space-x-8">
           <!-- Products Dropdown -->
           <div class="nav-dropdown group relative">
-            <button class="nav-link flex items-center space-x-1 px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
+            <button class="nav-link flex items-center space-x-1 px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">
               <span>Products</span>
               <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </button>
-            <div class="nav-dropdown-content absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-40">
+            <div class="nav-dropdown-content absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-40">
               <div class="p-2">
-                <a href="#" class="nav-dropdown-item flex items-start p-3 rounded-md hover:bg-gray-50 transition-colors duration-200">
-                  <div>
-                    <div class="font-semibold text-gray-900">Secure Email</div>
-                    <div class="text-sm text-gray-600">HIPAA-compliant email solution</div>
-                  </div>
-                </a>
-                <a href="#" class="nav-dropdown-item flex items-start p-3 rounded-md hover:bg-gray-50 transition-colors duration-200">
-                  <div>
-                    <div class="font-semibold text-gray-900">Secure Text</div>
-                    <div class="text-sm text-gray-600">Secure patient portal access</div>
-                  </div>
-                </a>
-                <a href="#" class="nav-dropdown-item flex items-start p-3 rounded-md hover:bg-gray-50 transition-colors duration-200">
-                  <div>
-                    <div class="font-semibold text-gray-900">Secure Marketing</div>
-                    <div class="text-sm text-gray-600">ePHI email marketing solution</div>
-                  </div>
-                </a>
-                <a href="#" class="nav-dropdown-item flex items-start p-3 rounded-md hover:bg-gray-50 transition-colors duration-200">
-                  <div>
-                    <div class="font-semibold text-gray-900">Secure Forms</div>
-                    <div class="text-sm text-gray-600">Safe data collection forms</div>
-                  </div>
-                </a>
+                <a href="https://luxsci.com/secure-high-volume-email/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">Secure High Volume Email</a>
+                <a href="https://luxsci.com/secure-email-gateway/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">Secure Email Gateway</a>
+                <a href="https://luxsci.com/secure-marketing/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">Secure Marketing</a>
+                <a href="https://luxsci.com/secure-forms/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">Secure Forms</a>
+                <a href="https://luxsci.com/secure-text/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">Secure Text</a>
+                <a href="https://luxsci.com/secure-email-hosting/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">Secure Email Hosting</a>
+                <a href="https://luxsci.com/secure-web-hosting/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">Secure Web Hosting</a>
               </div>
             </div>
           </div>
           
-          <!-- Solutions Dropdown -->
+          <!-- HIPAA Dropdown -->
           <div class="nav-dropdown group relative">
-            <button class="nav-link flex items-center space-x-1 px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
-              <span>Solutions</span>
+            <button class="nav-link flex items-center space-x-1 px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">
+              <span>HIPAA</span>
               <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </button>
-            <div class="nav-dropdown-content absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-40">
+            <div class="nav-dropdown-content absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-40">
               <div class="p-2">
-                <a href="#" class="nav-dropdown-item flex items-start p-3 rounded-md hover:bg-gray-50 transition-colors duration-200">
-                  <div>
-                    <div class="font-semibold text-gray-900">Care Management</div>
-                    <div class="text-sm text-gray-600">Patient engagement solutions</div>
-                  </div>
-                </a>
-                <a href="#" class="nav-dropdown-item flex items-start p-3 rounded-md hover:bg-gray-50 transition-colors duration-200">
-                  <div>
-                    <div class="font-semibold text-gray-900">Marketing</div>
-                    <div class="text-sm text-gray-600">Healthcare marketing campaigns</div>
-                  </div>
-                </a>
-                <a href="#" class="nav-dropdown-item flex items-start p-3 rounded-md hover:bg-gray-50 transition-colors duration-200">
-                  <div>
-                    <div class="font-semibold text-gray-900">Preventative Care</div>
-                    <div class="text-sm text-gray-600">Proactive patient engagement</div>
-                  </div>
-                </a>
+                <a href="https://luxsci.com/hipaa-compliant-email/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">HIPAA Compliant Email</a>
+                <a href="https://luxsci.com/what-is-hipaa-compliant-marketing/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">HIPAA Compliant Marketing</a>
+                <a href="https://luxsci.com/how-to-implement-hipaa-compliant-email-marketing/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">HIPAA Compliant Email Marketing</a>
+                <a href="https://luxsci.com/what-is-a-hipaa-compliant-form/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">HIPAA Compliant Forms</a>
+                <a href="https://luxsci.com/hipaa-compliant-hosting/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">HIPAA Compliant Hosting</a>
               </div>
             </div>
           </div>
           
-          <!-- Resources -->
-          <a href="#" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">Resources</a>
+          <!-- Resources Dropdown -->
+          <div class="nav-dropdown group relative">
+            <button class="nav-link flex items-center space-x-1 px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">
+              <span>Resources</span>
+              <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="nav-dropdown-content absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-40">
+              <div class="p-2">
+                <a href="https://luxsci.com/api/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">API Access</a>
+                <a href="https://luxsci.com/smtp-tls-checker/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">SMTP TLS Checker</a>
+                <a href="https://luxsci.com/secureline-technology/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">SecureLine Technology</a>
+                <a href="https://status.luxsci.com/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">System Status</a>
+                <a href="/category/hipaa-compliant-email/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">Blog</a>
+                <a href="https://luxsci.com/eob-calculator/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">EOB Calculator</a>
+              </div>
+            </div>
+          </div>
           
           <!-- Company Dropdown -->
           <div class="nav-dropdown group relative">
-            <button class="nav-link flex items-center space-x-1 px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">
+            <button class="nav-link flex items-center space-x-1 px-3 py-2 text-gray-700 hover:text-blue-600 font-semibold transition-colors duration-200">
               <span>Company</span>
               <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -132,22 +119,19 @@
             </button>
             <div class="nav-dropdown-content absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-40">
               <div class="p-2">
-                <a href="#" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">About Us</a>
-                <a href="#" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">Leadership</a>
-                <a href="#" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">Careers</a>
-                <a href="#" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">News</a>
+                <a href="https://luxsci.com/company/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">About Us</a>
+                <a href="https://luxsci.com/partners/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">Partners</a>
+                <a href="https://luxsci.com/company/support/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">Support</a>
+                <a href="https://luxsci.com/company/contact-us/" class="nav-dropdown-item block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md transition-colors duration-200">Contact Us</a>
               </div>
             </div>
           </div>
-          
-          <!-- Pricing -->
-          <a href="#" class="nav-link px-3 py-2 text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">Pricing</a>
         </nav>
         
         <!-- CTA Buttons -->
         <div class="hidden lg:flex items-center space-x-4">
-          <a href="#" class="btn-secondary">Login</a>
-          <a href="#" class="btn-primary">
+          <a href="https://app.luxsci.com/perl/member/login.pl" class="btn-secondary">Login</a>
+          <a href="https://luxsci.com/company/contact-us/" class="btn-primary">
             Contact Us
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -172,58 +156,77 @@
           <!-- Mobile Products -->
           <div class="mobile-dropdown">
             <button class="mobile-dropdown-toggle w-full flex items-center justify-between px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
-              <span class="font-medium">Products</span>
+              <span class="font-semibold">Products</span>
               <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </button>
             <div class="mobile-dropdown-content hidden pl-4 mt-1 space-y-1">
-              <a href="#" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Secure Email</a>
-              <a href="#" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Secure Text</a>
-              <a href="#" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Secure Marketing</a>
-              <a href="#" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Secure Forms</a>
+              <a href="https://luxsci.com/secure-high-volume-email/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Secure High Volume Email</a>
+              <a href="https://luxsci.com/secure-email-gateway/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Secure Email Gateway</a>
+              <a href="https://luxsci.com/secure-marketing/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Secure Marketing</a>
+              <a href="https://luxsci.com/secure-forms/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Secure Forms</a>
+              <a href="https://luxsci.com/secure-text/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Secure Text</a>
+              <a href="https://luxsci.com/secure-email-hosting/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Secure Email Hosting</a>
+              <a href="https://luxsci.com/secure-web-hosting/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Secure Web Hosting</a>
             </div>
           </div>
           
-          <!-- Mobile Solutions -->
+          <!-- Mobile HIPAA -->
           <div class="mobile-dropdown">
             <button class="mobile-dropdown-toggle w-full flex items-center justify-between px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
-              <span class="font-medium">Solutions</span>
+              <span class="font-semibold">HIPAA</span>
               <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </button>
             <div class="mobile-dropdown-content hidden pl-4 mt-1 space-y-1">
-              <a href="#" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Care Management</a>
-              <a href="#" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Marketing</a>
-              <a href="#" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Preventative Care</a>
+              <a href="https://luxsci.com/hipaa-compliant-email/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">HIPAA Compliant Email</a>
+              <a href="https://luxsci.com/what-is-hipaa-compliant-marketing/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">HIPAA Compliant Marketing</a>
+              <a href="https://luxsci.com/how-to-implement-hipaa-compliant-email-marketing/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">HIPAA Compliant Email Marketing</a>
+              <a href="https://luxsci.com/what-is-a-hipaa-compliant-form/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">HIPAA Compliant Forms</a>
+              <a href="https://luxsci.com/hipaa-compliant-hosting/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">HIPAA Compliant Hosting</a>
             </div>
           </div>
           
-          <a href="#" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium">Resources</a>
+          <!-- Mobile Resources -->
+          <div class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle w-full flex items-center justify-between px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
+              <span class="font-semibold">Resources</span>
+              <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="mobile-dropdown-content hidden pl-4 mt-1 space-y-1">
+              <a href="https://luxsci.com/api/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">API Access</a>
+              <a href="https://luxsci.com/smtp-tls-checker/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">SMTP TLS Checker</a>
+              <a href="https://luxsci.com/secureline-technology/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">SecureLine Technology</a>
+              <a href="https://status.luxsci.com/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">System Status</a>
+              <a href="/category/hipaa-compliant-email/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Blog</a>
+              <a href="https://luxsci.com/eob-calculator/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">EOB Calculator</a>
+            </div>
+          </div>
           
           <!-- Mobile Company -->
           <div class="mobile-dropdown">
             <button class="mobile-dropdown-toggle w-full flex items-center justify-between px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors duration-200">
-              <span class="font-medium">Company</span>
+              <span class="font-semibold">Company</span>
               <svg class="w-4 h-4 transform transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
             </button>
             <div class="mobile-dropdown-content hidden pl-4 mt-1 space-y-1">
-              <a href="#" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">About Us</a>
-              <a href="#" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Leadership</a>
-              <a href="#" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Careers</a>
-              <a href="#" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">News</a>
+              <a href="https://luxsci.com/company/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">About Us</a>
+              <a href="https://luxsci.com/partners/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Partners</a>
+              <a href="https://luxsci.com/company/support/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Support</a>
+              <a href="https://luxsci.com/company/contact-us/" class="block px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md">Contact Us</a>
             </div>
           </div>
           
-          <a href="#" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md font-medium">Pricing</a>
-          
           <!-- Mobile CTA -->
           <div class="pt-4 border-t border-gray-200 mt-4 space-y-3">
-            <a href="#" class="btn-secondary w-full text-center">Login</a>
-            <a href="#" class="btn-primary w-full text-center justify-center">
+            <a href="https://app.luxsci.com/perl/member/login.pl" class="btn-secondary w-full text-center">Login</a>
+            <a href="https://luxsci.com/company/contact-us/" class="btn-primary w-full text-center justify-center">
               Contact Us
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
