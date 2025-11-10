@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="py-8">
+<div class="container mx-auto py-8 px-4 md:px-8 xl:px-25">
   <!-- Container with responsive margins -->
   <div class="mx-auto px-4 md:px-8 xl:px-24">
     <div class="grid grid-cols-1 xl:grid-cols-6 gap-4 md:gap-8">
