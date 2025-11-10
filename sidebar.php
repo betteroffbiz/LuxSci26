@@ -66,7 +66,7 @@
 
 <div class="g-recaptcha" data-sitekey="6LcSUvgpAAAAAEdFphKDLT6VvoD7XEVSgyq96Q2_"></div><br>
 
-<input type="submit" name="submit" class="submitbutton" value="Submit">
+<input type="submit" name="submit" class="submitbutton" value="Submit" style="background-color: #109dce; color: white; font-weight: bold;">
 
 </form>
 
@@ -74,7 +74,7 @@
   </div>
 
   <!-- Search Widget -->
-  <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 md:p-6">
+  <!-- <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 md:p-6">
     <h3 class="text-lg font-semibold mb-4">Search</h3>
     <form role="search" method="get" action="<?php echo home_url('/'); ?>">
       <div class="flex">
@@ -84,7 +84,7 @@
         </button>
       </div>
     </form>
-  </div>
+  </div> -->
 
   <!-- Categories Widget -->
   <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-4 md:p-6">
@@ -97,7 +97,7 @@
       ));
       foreach($categories as $category): ?>
         <li>
-          <a href="<?php echo get_category_link($category->term_id); ?>" class="text-blue-600 hover:text-blue-800 text-sm no-underline flex justify-between">
+          <a href="<?php echo get_category_link($category->term_id); ?>" class="hover:text-blue-800 text-sm no-underline flex justify-between" style="color: rgb(23, 44, 76);">
             <span><?php echo $category->name; ?></span>
             <span class="text-gray-500">(<?php echo $category->count; ?>)</span>
           </a>
@@ -117,7 +117,7 @@
       ));
       foreach($recent_posts as $post_item): ?>
         <li>
-          <a href="<?php echo get_permalink($post_item['ID']); ?>" class="text-blue-600 hover:text-blue-800 text-sm leading-relaxed no-underline block">
+          <a href="<?php echo get_permalink($post_item['ID']); ?>" class="hover:text-blue-800 text-sm leading-relaxed no-underline block" style="color: rgb(23, 44, 76);">
             <?php echo $post_item['post_title']; ?>
           </a>
         </li>
@@ -156,7 +156,7 @@
       <input type="text" placeholder="First name" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
       <input type="text" placeholder="Last name" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
       <input type="email" placeholder="Your email" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
-      <button type="submit" class="w-full bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition-colors duration-200 text-sm font-medium">Download Now</button>
+      <button type="submit" class="w-full text-white px-4 py-2 rounded transition-colors duration-200 text-sm font-bold" style="background-color: #109dce;">Download Now</button>
     </form>
     <p class="text-xs text-gray-500 mt-2">We respect your privacy. No spam, ever.</p>
   </div>

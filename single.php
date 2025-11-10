@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 <div class="container mx-auto py-8 px-4 md:px-8 xl:px-25">
-  <!-- Container with responsive margins -->
-  <div class="mx-auto px-4 md:px-8 xl:px-24">
     <div class="grid grid-cols-1 xl:grid-cols-6 gap-4 md:gap-8">
       <!-- Main Content Area (4 columns out of 6) -->
       <main id="main" class="xl:col-span-4">
@@ -21,44 +19,11 @@
             <?php the_content(); ?>
           </div>
           
-          <?php if (get_the_tags()): ?>
             <footer class="mt-8 pt-6 border-t border-gray-200">
-              <div class="flex flex-wrap gap-2">
-                <span class="text-sm text-gray-600 font-medium">Tags:</span>
-                <?php the_tags('<span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">', '</span><span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">', '</span>'); ?>
-              </div>
+              <!-- Author Bio Box -->
+              <?php display_author_bio_box(); ?>
             </footer>
-          <?php endif; ?>
         </article>
-        
-        <!-- Navigation between posts -->
-        <nav class="mt-8 flex justify-between">
-          <div class="flex-1">
-            <?php 
-            $prev_post = get_previous_post();
-            if ($prev_post): ?>
-              <a href="<?php echo get_permalink($prev_post->ID); ?>" class="btn-secondary text-sm">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                </svg>
-                Previous Post
-              </a>
-            <?php endif; ?>
-          </div>
-          
-          <div class="flex-1 text-right">
-            <?php 
-            $next_post = get_next_post();
-            if ($next_post): ?>
-              <a href="<?php echo get_permalink($next_post->ID); ?>" class="btn-secondary text-sm">
-                Next Post
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </a>
-            <?php endif; ?>
-          </div>
-        </nav>
       <?php endwhile; endif; ?>
     </main>
     
