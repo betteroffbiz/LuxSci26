@@ -151,13 +151,6 @@
       How email deliverability impacts marketing ROI
       </li>
     </ul>
-    <h4 class="font-medium text-sm mb-3">Enter your email to download now!</h4>
-    <form class="space-y-3">
-      <input type="text" placeholder="First name" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
-      <input type="text" placeholder="Last name" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
-      <input type="email" placeholder="Your email" class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm">
-      <button type="submit" class="w-full text-white px-4 py-2 rounded transition-colors duration-200 text-sm font-bold" style="background-color: #109dce;">Download Now</button>
-    </form>
-    <p class="text-xs text-gray-500 mt-2">We respect your privacy. No spam, ever.</p>
+    <a href="https://luxsci.com/thank-you-best-practices-paper-high-email-deliverability/" class="block w-full text-center text-white px-4 py-2 rounded transition-colors duration-200 text-sm font-bold hover:opacity-90" style="background-color: #109dce; text-decoration: none;">Get Free Ebook</a>
   </div>
 </div>
