@@ -15,30 +15,31 @@
                 <!-- Social Media Icons -->
                 <div class="flex gap-3">
                     <a href="https://www.linkedin.com/company/luxsci/" class="hover:opacity-80">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/linkedin-blue.svg" 
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/InBug-White.png" 
                              alt="LinkedIn" 
                              class="w-8 h-8" />
                     </a>
-                    <a href="https://www.youtube.com/channel/UCdMzeOklGPXMmdGJw7YJNTw" class="hover:opacity-80">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/youtube-blue.webp" 
-                             alt="YouTube" 
-                             class="w-8 h-8" />
-                    </a>
-                    <a href="https://x.com/LuxSci" class="hover:opacity-80">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/x-blue.webp" 
-                             alt="X (Twitter)" 
-                             class="w-8 h-8" />
-                    </a>
-                    <a href="https://www.facebook.com/LuxSciSecure" class="hover:opacity-80">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/facebook-blue.svg" 
-                             alt="Facebook" 
-                             class="w-8 h-8" />
-                    </a>
                     <a href="https://www.g2.com/sellers/luxsci" class="hover:opacity-80">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/g2-blue.webp" 
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/G2Logo-Red.png" 
                              alt="G2" 
                              class="w-8 h-8" />
                     </a>
+                    <a href="https://www.youtube.com/channel/UCdMzeOklGPXMmdGJw7YJNTw" class="hover:opacity-80">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/yt_icon_red_digital.png" 
+                             alt="YouTube" 
+                             class="w-8 h-8" />
+                    </a>
+                    <a href="https://www.facebook.com/LuxSciSecure" class="hover:opacity-80">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/Facebook_Logo_Primary-scaled.webp" 
+                             alt="Facebook" 
+                             class="w-8 h-8" />
+                    </a>
+                    <a href="https://x.com/LuxSci" class="hover:opacity-80">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/logo-white-scaled.png" 
+                             alt="X (Twitter)" 
+                             class="w-8 h-8" />
+                    </a>
+                    
                 </div>
             </div>
 
