@@ -1,11 +1,13 @@
 {
-  "name": "perf-starter",
+  "name": "luxsci26",
   "private": true,
   "version": "0.1.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "zip": "npm run build && cd .. && zip -r perf-starter.zip perf-starter -x \"**/node_modules/**\" \"**/dist/*.map\"",
+    "build": "vite build && node scripts/package-theme.js",
+    "build:only": "vite build",
+    "package": "node scripts/package-theme.js",
     "lint": "echo \"(add eslint if you want)\"",
     "analyze": "vite build --mode analyze"
   },
@@ -13,6 +15,7 @@
     "@tailwindcss/forms": "^0.5.10",
     "@tailwindcss/typography": "^0.5.19",
     "@types/node": "^24.10.0",
+    "archiver": "^7.0.1",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
