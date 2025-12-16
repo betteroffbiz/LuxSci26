@@ -34,11 +34,13 @@
                              alt="Facebook" 
                              class="w-8 h-8" />
                     </a>
+
+                    <?php /*
                     <a href="https://x.com/LuxSci" class="hover:opacity-80">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/logo-white-scaled.png" 
                              alt="X (Twitter)" 
                              class="w-8 h-8" />
-                    </a>
+                    </a>  */?>
                     
                 </div>
             </div>
